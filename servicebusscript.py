@@ -6,9 +6,9 @@ from azure.servicebus import ServiceBusClient, ServiceBusReceiver
 from azure.servicebus import ServiceBusClient, ServiceBusReceivedMessage
 import json
 import os
-connectionString = "Endpoint=sb://abujaservicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=6KkaUPtKIIqTOiAbCc0aDv3pY7QRW8vCpO53HyNxu9k="
+connectionString = "{add servicebus connection string}"
 serviceBusClient = ServiceBusClient.from_connection_string(connectionString)
-queueName = "createcifandaccount"
+queueName = "{Add queue name}"
 Client = serviceBusClient.get_queue_sender(queueName)
 queue_receiver = serviceBusClient.get_queue_receiver(queueName)
 messageToSend=[]
